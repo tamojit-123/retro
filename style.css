@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap');
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: radial-gradient(rgba(73, 136, 231, 0.5) 0%,
+    transparent 70%), linear-gradient(#16a6d2 40%,
+    #2a24e3 70%);
+    perspective: 700px;
+    font-size: clamp(10px, 2vw, 20px);
+}
+
+.lines {
+    position: fixed;
+    width: 100vw;
+    height: 4em;
+    background: linear-gradient(rgba(147, 254, 89, 0.2) 20%,
+    #7dfe59 40%, #72fe59 60%, rgba(89, 254, 136, 0.2) 80%);
+    background-size: 1px 0.5em;
+    box-shadow: 0 0 1em rgba(89, 254, 149, 0.4);
+    transform: translateY(-1em);
+    left: 0;
+}
+
+h1 {
+    position: relative;
+    font-family: 'Exo', serif;
+    font-size: 9em;
+    margin: 0;
+    transform: skew(-15deg);
+    letter-spacing: 0.03em;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    top: -0.1em;
+    right: 0.05em;
+    width: 0.4em;
+    height: 0.4em;
+}
+
+h1 span:first-child {
+    display: block;
+    text-shadow: 0 0 0.1em #a8d08b, 0 0 0.2em black, 0 0 5em #1df316;
+    -webkit-text-stroke: 0.06em rgba(0, 0, 0, 0.5);
+}
+
+h1 span:last-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(#035014 25%, #24ef00 35%,
+    white 50%, #235f12 50%, #33e713 55%, #6189ff 75%);
+    -webkit-text-stroke: 0.01em #94a0b9;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-family: 'Mr Dafoe', serif;
+    font-size: 5.5em;
+    margin: -0.6em 0 0;
+    color: white;
+    text-shadow: 0 0 0.05em #fff,
+    0 0 0.2em #05e1fe,
+    0 0 0.3em #0560fe;
+    transform: rotate(-7deg);
+}
+
+.grid {
+    background: linear-gradient(transparent 65%,
+    rgba(38, 74, 255, 0.4) 75%, #41b2e6 80%,
+    rgba(38, 99, 255, 0.4) 85%, transparent 95%),
+    linear-gradient(90deg, transparent 65%,
+            rgba(38, 99, 255, 0.4) 75%, #4170e6 80%,
+            rgba(38, 125, 255, 0.4) 85%, transparent 95%);
+    background-size: 30px 30px;
+    width: 200vw;
+    height: 300vh;
+    position: absolute;
+    bottom: -120vh;
+    transform: rotateX(-100deg);
+}
